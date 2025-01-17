@@ -1,7 +1,10 @@
 use std::io;
+use rand::Rng;
 
 fn main() {
-    println!("Guessing number game!");
+    let secret_number = rand::thread_rng().gen_range(1..101);
+
+    println!("Guessing number game! the secret number is {}!", secret_number);
 
     println!("Input you number!");
 
